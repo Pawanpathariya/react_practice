@@ -3,7 +3,6 @@ import Home from './pages/home.jsx'
 import About from './pages/about.jsx'
 import Contact from './pages/contact.jsx'
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
-import Nopage from './pages/nopage.jsx';
 import AboutCompany from './pages/aboutComp.jsx';
 import AboutService from './pages/aboutService.jsx';
 import AboutCompanyEmp from './pages/aboutEmp.jsx';
@@ -15,7 +14,7 @@ const App=()=>{
       <Route path="/" element={<Layout/>}>
         <Route index element={<Home/>} />
         <Route path='home' element={<Home/>} />
-        
+
         <Route path="about" element={<About/>}>
         <Route index element={<AboutCompany/>}/>
           <Route path="company" element={<AboutCompany/>} />
