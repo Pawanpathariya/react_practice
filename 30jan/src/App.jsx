@@ -78,32 +78,60 @@
 // }
 // export default App;
 
-import Data from "./EmpData"
-import Design from "./Design"
+// import Data from "./EmpData"
+// import Design from "./Design"
 
-const ans=Data.map((item) => (
-  <Design rollno={item.rollno}
-   name={item.name}
-    subject={item.subject}
-     fees={item.fees} />
-));
+// const ans=Data.map((item) => (
+//   <Design rollno={item.rollno}
+//    name={item.name}
+//     subject={item.subject}
+//      fees={item.fees} />
+// ));
+// const App=()=>{
+//   return(
+//     <>
+//       <h1>Hello</h1>
+//       <center>
+//       <table border='2' width='700' style={{textAlign:"center"}}>
+//         <tr bgcolor="yellow">
+//           <th>Roll no</th>
+//           <th>Student Name</th>
+//           <th>Subject</th>
+//           <th>Total Fees</th>
+//         </tr>
+//       {ans}
+//       </table>
+//       </center>
+//     </>
+//   )
+// }
+
+// export default App
+
+
+
+
+
+
+
 const App=()=>{
   return(
     <>
-      <h1>Hello</h1>
-      <center>
-      <table border='2' width='700' style={{textAlign:"center"}}>
-        <tr bgcolor="yellow">
-          <th>Roll no</th>
-          <th>Student Name</th>
-          <th>Subject</th>
-          <th>Total Fees</th>
-        </tr>
-      {ans}
-      </table>
-      </center>
-    </>
+     <div style={{textAlign:"center",width:"400px",backgroundColor:"yellowgreen",height:"250px",position:"relative",borderRadius:"20px"}}>
+  <div style={{position:"relative" ,top:"30%" ,border:"2px solid black",padding:"10px",borderRadius:"20px",backgroundColor:"green",width:"70%",left:"12%"}}>
+    <h1 style={{color:"white"}}>Cybrom</h1>
+  </div>
+     </div>
+  </>
   )
-}
+} 
+
+
+
+
+
+
+
+
 
 export default App
