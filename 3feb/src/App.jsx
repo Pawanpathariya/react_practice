@@ -6,7 +6,9 @@ const App=()=>{
   const handleInput=(e)=>{
     const name=e.target.name;
     const value=e.target.value;
-    setData(values=>({...values,[name]:value}))
+
+    setData({...data,[name]:value})
+    
   }
 
   const handleSubmit=(e)=>{
