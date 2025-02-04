@@ -2,19 +2,27 @@
 import { useState } from "react";
 
 const App=()=>{
-const [name,setName]=useState("");
-const [city,setcity]=useState("");
-const handlesubmit=()=>{
-  const input ={name:name,city:city}
-  console.log(input);
-}
+  const [data,setData]=useState({})
+  const handleInput=(e)=>{
+    const name=e.target.name;
+    const value=e.target.value;
+    setData(values=>({...values,[name]:value}))
+  }
+
+  const handleSubmit=(e)=>{
+    console.log(data);
+    
+  }
   return(
     <>
    <h1>Application form</h1>
+Enter Name<input type="text" name="name" onChange={handleInput} /> <br />
+Enter city <input type="text" name="city" onChange={handleInput} /> <br /> 
+Enter Subject <input type="text" name="subject" onChange={handleInput} /> <br /> 
+Enter Fees <input type="text" name="fees" onChange={handleInput} /> <br />
 
-   Enter Name : <input type="text" value={name} onChange={(e)=>setName(e.target.value)} /> <br />
-   Enter City : <input type="text" value={city} onChange={(e)=>setcity(e.target.value)} /> <br />
-   <button onClick={handlesubmit}>Submit</button>
+
+<button onClick={handleSubmit}>Submit</button>
     </>
   )
 } 
