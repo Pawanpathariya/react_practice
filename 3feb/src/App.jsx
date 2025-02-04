@@ -16,10 +16,10 @@ const App=()=>{
   return(
     <>
    <h1>Application form</h1>
-Enter Name<input type="text" name="name" onChange={handleInput} /> <br />
-Enter city <input type="text" name="city" onChange={handleInput} /> <br /> 
-Enter Subject <input type="text" name="subject" onChange={handleInput} /> <br /> 
-Enter Fees <input type="text" name="fees" onChange={handleInput} /> <br />
+Enter Name : <input type="text" name="name" value={data.name} onChange={handleInput} /> <br />
+Enter city : <input type="text" name="city" value={data.city} onChange={handleInput} /> <br /> 
+Enter Subject : <input type="text" name="subject" value={data.subject} onChange={handleInput} /> <br /> 
+Enter Fees : <input type="text" name="fees"value={data.fees}  onChange={handleInput} /> <br />
 
 
 <button onClick={handleSubmit}>Submit</button>
