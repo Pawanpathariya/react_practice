@@ -40,7 +40,6 @@ const [mycolor,discolor]=useReducer(colorChange,"pink")
     <div style={{width:"200px",height:"200px",backgroundColor:mycolor,color:"white",borderRadius:"20px",marginTop:"20px",marginBottom:"20px"}}>
 
     </div>
-
     <button onClick={()=>discolor("red")}>red</button> 
     <button onClick={()=>discolor("green")}>Green</button>
     <button onClick={()=>discolor("yellow")}>Yellow</button>
