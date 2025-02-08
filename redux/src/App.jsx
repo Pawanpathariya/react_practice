@@ -37,13 +37,15 @@ const [mycolor,discolor]=useReducer(colorChange,"pink")
     <button onClick={()=>dispatch("decrement")}>Decrement</button>
 
 
-    <div style={{width:"200px",height:"200px",backgroundColor:mycolor,color:"white",borderRadius:"20px",marginTop:"20px",marginBottom:"20px"}}>
+    <div style={{width:"300px",height:"200px",backgroundColor:mycolor,color:"white",borderRadius:"20px",marginTop:"20px",marginBottom:"20px"}}>
 
     </div>
-    <button onClick={()=>discolor("red")}>red</button> 
-    <button onClick={()=>discolor("green")}>Green</button>
-    <button onClick={()=>discolor("yellow")}>Yellow</button>
-    <button onClick={()=>discolor("blue")}>Blue</button>
+    <div style={{display:"flex",gap:"30px"}}>
+    <button style={{backgroundColor:"red",color:"white",borderRadius:"10px",padding:"10px"}} onClick={()=>discolor("red")}>red</button> 
+    <button style={{backgroundColor:"green",color:"white",borderRadius:"10px",padding:"10px"}} onClick={()=>discolor("green")}>Green</button>
+    <button style={{backgroundColor:"yellow",color:"black",borderRadius:"10px",padding:"10px"}} onClick={()=>discolor("yellow")}>Yellow</button>
+    <button style={{backgroundColor:"blue",color:"white",borderRadius:"10px",padding:"10px"}} onClick={()=>discolor("blue")}>Blue</button>
+    </div>
     </>
     )
 }
