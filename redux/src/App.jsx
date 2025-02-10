@@ -1,49 +1,21 @@
-import { useState,useMemo } from "react";
-// const App=()=>{
-//     const [add,setadd]=useState(0);
-//     const[sub,setsub]=useState(100);
+import { useCallback,useState } from "react";
+import Call2 from "./Call2";
+const App=()=>{     
+    const [count,setcount]=useState(0);
+    const [task,settask]=useState([]); 
 
-// const Mymul=useMemo(()=>{
-//     console.log("**********");
-//     return add*2;
-// },[add])
+    const myAdd=()=>{
+        settask(values=>[...values, "New Task"])
+    }
 
-//     return (
-//         <>
-//         <h1>My multiplication : {Mymul}</h1>
-//             <h1>Addition : {add}</h1>
-//             <button onClick={()=>setadd(add+1)}>Add</button>
-//             <h1>Substractin : {sub}</h1>
-//             <button onClick={()=>setsub(sub-1)}>Sub</button>
-//         </>
-//     )
-// }
-
-// export default App;
-
-
-
-
-
-
-const App=()=>{
-    const [num,setnum]=useState(0);
-    const[city,setcity]=useState("");
-const mymul=()=>{
-    for(var i=0;i<1000000000;i++){}
-        return num*2;
+    const MyTaskAdd=useCallback(myAdd,[task])
+    return(
+        <>
+        <Call2 task={task} addtask={MyTaskAdd} />
+       <button onClick={()=>setcount(count+1)}>Click here</button>
+       count:{count}
+        </>
+    )
 }
 
-    const Mymul=useMemo(mymul,[num])
-
-
-return(
-<>
-<h1>Enter Number <input type="number" value={num} onChange={(e)=>setnum(e.target.value)}/></h1>
-<h1>Enter City <input type="text" value={city} onChange={(e)=>setcity(e.target.value)}/></h1>
-
-<h1>My multi {Mymul}</h1>
-</>
-)
-}
-export default App
+export default App;
