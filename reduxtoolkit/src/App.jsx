@@ -7,12 +7,15 @@ const App=()=>{
   const mycolor=useSelector((state)=>state.color.colorval)
   return(
     <>
+    <center>
+    <h1>My Color</h1>
    Enter Color <input type="text" name="" id="" value={col} onChange={(e)=>setcol(e.target.value)}/> 
    <button onClick={()=>dispatch(changeColor(col))}>Change</button>
    <br /> <br />
    <div style={{width:"200px",height:"200px",background:mycolor}}>
 
    </div>
+   </center>
     </>
   )
 }
